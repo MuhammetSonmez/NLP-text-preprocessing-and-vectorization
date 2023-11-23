@@ -16,7 +16,7 @@ This guide repo includes guides and examples covering various topics related to 
    import re  
    mystr = re.sub(r'[^\w\s]', '', mystr)#removing punctuation
    print(mystr)
-   #or:
+   # or:
    import string
    mystr = "Hello, it's my example sentence!"
    translator = str.maketrans("", "", string.punctuation)
