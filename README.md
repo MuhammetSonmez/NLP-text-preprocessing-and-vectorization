@@ -219,7 +219,7 @@ Loss of Information: Since stemming involves removing suffixes, there is a poten
        words = nltk.word_tokenize(sentence)#tokenization
        words = [w for w in words if not w in stop_words] #stopwords removal
        for word in words:
-           filter_sentence.append(lemmatizer.lemmatize(word))
+           filter_sentence.append(lemmatizer.lemmatize(word))#Lemmatization
        print(filter_sentence)
        data.ix[index, 'Title'] = filter_sentence   
    ```
