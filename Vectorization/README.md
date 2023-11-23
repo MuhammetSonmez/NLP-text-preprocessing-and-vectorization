@@ -1,6 +1,7 @@
 <h1>Vectorization</h1>
 
-# bag of words
+# bag of words<br>
+-Bag of Words (BoW) is a common technique used in natural language processing (NLP) and text analysis to represent textual data. The basic idea behind BoW is to convert a piece of text into a numerical vector by counting the frequency of each word in the text and representing it as a vector of word counts.
 ## Representing words by their frequencies
 
 <ol>
