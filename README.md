@@ -157,4 +157,74 @@ Loss of Information: Since stemming involves removing suffixes, there is a poten
 
 # 4. Lemmatization:<br>
 
-   
+## Combine the all informations (text preprocessing)
+      
+      ```python
+      import re
+      import nltk
+      from nltk.corpus import stopwords
+      from nltk.stem import PorterStemmer, WordNetLemmatizer
+      #nltk.download('stopwords')
+      
+      #cleaning
+      mystr = "Hello, it's my example sentence!"
+      mystr = mystr.lower()
+      print(mystr)
+      
+      mystr = re.sub(r'[^\w\s]', '', mystr)#removing punctuation
+      print(mystr)
+      
+      #tokenization
+      nltk.download('punkt')
+      nltk.download('wordnet')
+      
+      mystr = nltk.word_tokenize(mystr)
+      print(mystr)
+      
+      #stop words removing
+      language = "english"
+      stop_words = stopwords.words(language)
+      custom_stopwords = ['test'] #adding custom stop word
+      stop_words.extend(custom_stopwords)
+      wordsFiltered = []
+      for word in mystr:
+          if word not in stop_words:
+              wordsFiltered.append(word)
+      
+      #print([word for word in wordsFiltered])
+      
+      print(mystr)
+      
+      #print(stop_words)
+      
+      #stemming
+      """
+      stemmer = PorterStemmer()
+      for word in mystr:
+          print(stemmer.stem(word))
+      """
+      #Lemmatization
+      
+      lemmatizer= WordNetLemmatizer()
+      for word in mystr:
+          print(lemmatizer.lemmatize(word))
+      
+      
+      data = ['Title'][0:10]
+      lemmatizer = WordNetLemmatizer()
+      for index, row in data.iterrows():
+          filter_sentence = []
+          sentence = row['Title']
+          sentence = re.sub(r'\w\s', '', sentence)#cleaning
+          words = nltk.word_tokenize(sentence)#tokenization
+          words = [w for w in words if not w in stop_words] #stopwords removal
+          for word in words:
+              filter_sentence.append(lemmatizer.lemmatize(word))
+          print(filter_sentence)
+          data.ix[index, 'Title'] = filter_sentence   
+      ```
+
+## always remember : 
+# Tokens : is every word in a sentence
+# Word: Token which is not stopword 
+# Stopword: Unwanted words ( should be removed but not all words . Words like not, ok should be avoided )
