@@ -122,22 +122,39 @@ However, in some cases, simply splitting a text based on spaces may be sufficien
    </li>
    <li>
    Snowball Stemmer: Also known as the Porter2 stemmer, it is an extension of the Porter stemmer and provides support for multiple languages.
+   # Example:
+         
+   ```python
+   stemmer = nltk.stem.SnowballStemmer()
+   for word in mystr:
+      print(stemmer.stem(word))
+   ```
    </li>
    <li>
 Lancaster Stemmer: This is an aggressive stemming algorithm that often produces shorter stems compared to the Porter stemmer.
+   # Example:
+         
+   ```python
+   stemmer = nltk.stem.LancasterStemmer()
+   for word in mystr:
+      print(stemmer.stem(word))
+   ```
    </li>
 </ol>
-Considerations and Limitations:
-
-While stemming is a valuable tool, it's important to note some considerations and limitations:
-
+-Considerations and Limitations: While stemming is a valuable tool, it's important to note some considerations and limitations:
+<ol>
+   <li>
 Over-stemming: Aggressive stemming may lead to over-stemming, where different words are incorrectly reduced to the same stem.
-
+   </li>
+   <li>
 Under-stemming: On the other hand, under-stemming may occur when related words are not reduced to the same stem.
-
+   </li>
+   <li>
 Loss of Information: Since stemming involves removing suffixes, there is a potential loss of information, and the resulting stems may not always be meaningful words.
+   </li>
+</ol>
+   -Despite these considerations, stemming is a widely used technique in text preprocessing for its simplicity and effectiveness in reducing the dimensionality of text data while retaining semantic meaning.
 
-Despite these considerations, stemming is a widely used technique in text preprocessing for its simplicity and effectiveness in reducing the dimensionality of text data while retaining semantic meaning.
 # 4. Lemmatization:<br>
 
    
