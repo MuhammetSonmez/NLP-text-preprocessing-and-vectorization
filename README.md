@@ -45,7 +45,7 @@ This guide repo includes guides and examples covering various topics related to 
    print(tokenized_str)
    ```
    # Warning:
-<h6>
+<h4>
 The split() function and nltk.word_tokenize() function essentially perform the same task: breaking down a piece of text into its constituent words. However, there are some differences between these two approaches, and the choice of which function to use may vary depending on the situation. Here are some key distinctions:
 <br>
 Natural Language Processing Functionality: The nltk.word_tokenize() function supports a broader range of functionality in natural language processing applications. Specifically, it can utilize grammatical information to ensure accurate parsing of sentences and words. In contrast, the split() function merely performs the function of separating based on spaces.
