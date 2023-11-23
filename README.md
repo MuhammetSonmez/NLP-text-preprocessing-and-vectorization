@@ -4,7 +4,7 @@ Hi, this project is a guide repository containing guides and examples related to
 ## Contents
 This guide repo includes guides and examples covering various topics related to text preprocessing and vectorization:
 
-1. Cleanning:<br>
+# 1. Cleanning:<br>
    -Convert all text to lowercase to ensure uniformity and prevent the model from treating the same word in different cases as different.
    # Example:
     ```python
@@ -27,5 +27,8 @@ This guide repo includes guides and examples covering various topics related to 
    mystr = mystr.translate(translator)
    print(mystr)
     ```
-2. Tokenization:<br>
+# 2. Tokenization:<br>
+# 3. Stemming:<br>
+# 4. Lemmatization:<br>
+
    
