@@ -86,8 +86,26 @@
     </tr>
 
 </table>
-
-
+# Example
+    
+    ```python
+    from sklearn.feature_extraction.text import CountVectorizer
+    string = ["This is an example of bag of words."]
+    vectorizer = CountVectorizer()
+    x = vectorizer.fit_transform(string)
+    print(vectorizer.get_feature_names_out())
+    print(x.toarray())
+    ```
+    
+    ```python
+    words_and_vectors = [(list(x.toarray())[0][i],vectorizer.get_feature_names_out()[i])
+    for i in range(len(list(x.toarray()[0])))]
+    
+    for i in words_and_vectors:
+      print(i)
+    
+    ```
+    
 
 
 
