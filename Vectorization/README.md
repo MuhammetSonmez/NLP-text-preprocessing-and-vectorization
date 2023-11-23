@@ -133,7 +133,22 @@ IDF(Machine) = log 3/1<br>
 IDF(data) = log 3/2<br>
 ...<br>
 ## Tf-idf = Tf * idf<br>
+# Example:
 
-
+```python
+from sklearn.feature_extraction.text import TfidfVectorizer
+tfidf = TfidfVectorizer()
+doc1 = "data scientists use statistical methods to draw meaningful insights."
+doc2 = "machine learning algorithms can analyze vast amounts of data."
+result = tfidf.fit_transform([doc1, doc2])
+print(len(tfidf.vocabulary_))
+print(tfidf.vocabulary_)
+print(result)
+feature_names = tfidf.get_feature_names_out()
+for col in result.nonzero()[1]:
+  print(feature_names[col]
+         ,"  -  "
+         ,result[0, col])
+```
 
 
