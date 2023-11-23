@@ -112,10 +112,13 @@ However, in some cases, simply splitting a text based on spaces may be sufficien
 <ol>
    <li>Porter Stemmer: Developed by Martin Porter, it's one of the oldest and widely used stemming algorithms. It applies a series of rules to reduce words to their base form.
    # Example:
-
-      stemmer = nltk.stem.PorterStemmer()
-      for word in mystr:
+         
+   ```python
+   stemmer = nltk.stem.PorterStemmer()
+   for word in mystr:
       print(stemmer.stem(word))
+   ```
+
    </li>
    <li>
    Snowball Stemmer: Also known as the Porter2 stemmer, it is an extension of the Porter stemmer and provides support for multiple languages.
