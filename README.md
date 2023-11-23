@@ -7,26 +7,26 @@ This guide repo includes guides and examples covering various topics related to 
 # 1. Cleanning:<br>
    -Convert all text to lowercase to ensure uniformity and prevent the model from treating the same word in different cases as different.
    # Example:
-    ```python
+   ```python
    mystr = "Hello, it's my example sentence!"
    mystr = mystr.lower()
    print(mystr)
-    ```
+   ```
    -Eliminate unnecessary punctuation marks, as they often do not contribute much to the meaning and can add noise to the data.
    # Example(recommended method):
-    ```python
+   ```python
     import re
     mystr = re.sub(r'[^\w\s]', '', mystr)  # removing punctuation
     print(mystr)
-    ```
+   ```
    # or:
-    ```python
+   ```python
    import string
    mystr = "Hello, it's my example sentence!"
    translator = str.maketrans("", "", string.punctuation)
    mystr = mystr.translate(translator)
    print(mystr)
-    ```
+   ```
 # 2. Tokenization:<br>
 # 3. Stemming:<br>
 # 4. Lemmatization:<br>
