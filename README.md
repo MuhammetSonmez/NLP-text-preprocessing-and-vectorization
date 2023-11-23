@@ -110,20 +110,20 @@ However, in some cases, simply splitting a text based on spaces may be sufficien
 
    -There are different algorithms for stemming, and each has its own rules and heuristics. Some common stemming algorithms include:<br>
 <ol>
-   <ul>Porter Stemmer: Developed by Martin Porter, it's one of the oldest and widely used stemming algorithms. It applies a series of rules to reduce words to their base form.
+   <li>Porter Stemmer: Developed by Martin Porter, it's one of the oldest and widely used stemming algorithms. It applies a series of rules to reduce words to their base form.
    # Example:
    ```python
    stemmer = nltk.stem.PorterStemmer()
    for word in mystr:
    print(stemmer.stem(word))
    ```
-   </ul>
-   <ul>
+   </li>
+   <li>
    Snowball Stemmer: Also known as the Porter2 stemmer, it is an extension of the Porter stemmer and provides support for multiple languages.
-   </ul>
-   <ul>
+   </li>
+   <li>
 Lancaster Stemmer: This is an aggressive stemming algorithm that often produces shorter stems compared to the Porter stemmer.
-   </ul>
+   </li>
 </ol>
 Considerations and Limitations:
 
