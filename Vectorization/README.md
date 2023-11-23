@@ -198,3 +198,9 @@ for col in result.nonzero()[1]:
     machine   -   0.0
     data   -   0.24395572500006343
 
+# Word2vec<br>
+
+
+
+
+
