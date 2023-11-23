@@ -142,13 +142,59 @@ doc1 = "data scientists use statistical methods to draw meaningful insights."
 doc2 = "machine learning algorithms can analyze vast amounts of data."
 result = tfidf.fit_transform([doc1, doc2])
 print(len(tfidf.vocabulary_))
+```
+    output:17
+```python
 print(tfidf.vocabulary_)
+```
+    output: {'data': 4, 'scientists': 12, 'use': 15, 'statistical': 13, 'methods': 10, 'to': 14, 'draw': 5, 'meaningful': 9, 'insights': 6, 'machine': 8, 'learning': 7, 'algorithms': 0, 'can': 3, 'analyze': 2, 'vast': 16, 'amounts': 1, 'of': 11}
+```python
 print(result)
+```
+    output:
+    (0, 6)	0.3428712594108198
+    (0, 9)	0.3428712594108198
+    (0, 5)	0.3428712594108198
+    (0, 14)	0.3428712594108198
+    (0, 10)	0.3428712594108198
+    (0, 13)	0.3428712594108198
+    (0, 15)	0.3428712594108198
+    (0, 12)	0.3428712594108198
+    (0, 4)	0.24395572500006343
+    (1, 11)	0.3428712594108198
+    (1, 1)	0.3428712594108198
+    (1, 16)	0.3428712594108198
+    (1, 2)	0.3428712594108198
+    (1, 3)	0.3428712594108198
+    (1, 0)	0.3428712594108198
+    (1, 7)	0.3428712594108198
+    (1, 8)	0.3428712594108198
+    (1, 4)	0.24395572500006343
+    
+```python
 feature_names = tfidf.get_feature_names_out()
 for col in result.nonzero()[1]:
   print(feature_names[col]
          ,"  -  "
          ,result[0, col])
 ```
-
+    output: 
+    insights   -   0.3428712594108198
+    meaningful   -   0.3428712594108198
+    draw   -   0.3428712594108198
+    to   -   0.3428712594108198
+    methods   -   0.3428712594108198
+    statistical   -   0.3428712594108198
+    use   -   0.3428712594108198
+    scientists   -   0.3428712594108198
+    data   -   0.24395572500006343
+    of   -   0.0
+    amounts   -   0.0
+    vast   -   0.0
+    analyze   -   0.0
+    can   -   0.0
+    algorithms   -   0.0
+    learning   -   0.0
+    machine   -   0.0
+    data   -   0.24395572500006343
 
