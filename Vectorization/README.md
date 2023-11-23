@@ -1,6 +1,6 @@
 <h1>Vectorization</h1>
 
-# bag of words<br>
+# Bag of Words<br>
 -Bag of Words (BoW) is a common technique used in natural language processing (NLP) and text analysis to represent textual data. The basic idea behind BoW is to convert a piece of text into a numerical vector by counting the frequency of each word in the text and representing it as a vector of word counts.
 ## Representing words by their frequencies
 
@@ -107,9 +107,32 @@ for i in words_and_vectors:
     
 ```
     
+# Tf-idf Vectorizer<br>
+-tf: How frequently a term occurs in a document
+TF(t) = (Number of items term t appears in a document)/(Total number of terms in the document)
+## Example:
+1- "Data science plays a crucial role in extracting insights from large datasets."
+TF("data") = 1/12
+TF("science") = 1/12
+TF("plays") = 1/12
+TF("crucial") = 1/12
+TF("role") = 1/12
+TF("extracting") = 1/12
+TF("insights") = 1/12
+TF("from") = 1/12
+TF("large") = 1/12
+TF("datasets") = 1/12
 
-
-
+-idf: the weight of rare words. The words that occur rarerly in the corpus have a high IDF score.
+IDF(t) = log(Total number of documents)/(Number of documents with term t in it)
+## Example:
+1-  "Machine learning algorithms can analyze vast amounts of data."
+2-  "The application of artificial intelligence is growing rapidly."
+3- "data scientists use statistical methods to draw meaningful insights."
+IDF(Machine) = log 3/1
+IDF(data) = log 3/2
+...
+## Tf-idf = Tf * idf
 
 
 
