@@ -1,7 +1,7 @@
 <h1>Vectorization</h1>
 
-## bag of words
-# Representing words by their frequencies
+# bag of words
+## Representing words by their frequencies
 
 <ol>
     <li>
