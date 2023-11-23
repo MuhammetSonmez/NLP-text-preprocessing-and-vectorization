@@ -224,7 +224,7 @@ Loss of Information: Since stemming involves removing suffixes, there is a poten
           data.ix[index, 'Title'] = filter_sentence   
       ```
 
-## always remember : 
-# Tokens : is every word in a sentence
-# Word: Token which is not stopword 
-# Stopword: Unwanted words ( should be removed but not all words . Words like not, ok should be avoided )
+# always remember : 
+## Tokens : is every word in a sentence
+## Word: Token which is not stopword 
+## Stopword: Unwanted words ( should be removed but not all words . Words like not, ok should be avoided )
