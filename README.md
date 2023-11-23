@@ -27,3 +27,5 @@ This guide repo includes guides and examples covering various topics related to 
    mystr = mystr.translate(translator)
    print(mystr)
     ```
+2. Tokenization:<br>
+   
