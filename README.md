@@ -82,7 +82,7 @@ However, in some cases, simply splitting a text based on spaces may be sufficien
    print(wordsFiltered)
    ```
 
-# 3. Stemming:<br>
+# 3. Stemming and Lemmatization<br>
    -Stemming is the process of reducing words to their base or root form, often by removing suffixes. The goal is to map related words to the same root, reducing them to a common base form. This can be beneficial in scenarios where variations of a word carry similar meanings, and treating them as the same token can simplify text analysis.
 
 <h3>For example:</h3>
@@ -154,8 +154,14 @@ Loss of Information: Since stemming involves removing suffixes, there is a poten
    </li>
 </ol>
    -Despite these considerations, stemming is a widely used technique in text preprocessing for its simplicity and effectiveness in reducing the dimensionality of text data while retaining semantic meaning.
-
-# 4. Lemmatization:<br>
+   -Then lemmatize:
+   # Example:
+      
+   ```python
+   lemmatizer= WordNetLemmatizer()
+   for word in mystr:
+       print(lemmatizer.lemmatize(word))
+   ```
 
 ## Combine the all informations (text preprocessing)
       
@@ -210,7 +216,7 @@ Loss of Information: Since stemming involves removing suffixes, there is a poten
        print(lemmatizer.lemmatize(word))
    
    
-   data = ['Title'][0:10]
+   data = ['Title'][0:10] #import your dataset (I was lazy to prepare the dataset :) )
    lemmatizer = WordNetLemmatizer()
    for index, row in data.iterrows():
        filter_sentence = []
