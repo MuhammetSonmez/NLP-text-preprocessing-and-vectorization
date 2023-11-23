@@ -4,7 +4,7 @@ Hi, this project is a guide repository containing guides and examples related to
 ## Contents
 This guide repo includes guides and examples covering various topics related to text preprocessing and vectorization:
 
-1. Cleanning
+1. Cleanning:
    -Convert all text to lowercase to ensure uniformity and prevent the model from treating the same word in different cases as different.
    # Example:
     ```python
